@@ -26,8 +26,15 @@ namespace LinkedList
                 }
                 temp.next = node;
             }
-            Console.WriteLine("{0} Inserted in linked list " +node);
+            Console.WriteLine("{0} Inserted in linked list ", node.data);
             
+        }
+        public void AddFirst(int data)      //AddFirst UC2
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine($"{newNode.data} is added into the list.");
         }
         public void Display()
         {
