@@ -8,16 +8,17 @@
             Console.WriteLine("===============================");
             Console.WriteLine("Choose a option from below\n" +
                 "\nChoose 1): To Creating a linked list \n" +
-                "Choose 2): To Creating a linked list \n");
+                "Choose 2): To AddFirst in a linked list \n" +
+                "Choose 3): To Append in a linked list \n");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch(option)
             {
                 case 1:
                     Linkedlist linkedList = new Linkedlist();
-                    linkedList.Add(56);
-                    linkedList.Add(30);
-                    linkedList.Add(70);
+                    linkedList.AddLast(56);
+                    linkedList.AddLast(30);
+                    linkedList.AddLast(70);
                     linkedList.Display();
                     break;
                 case 2:
@@ -26,6 +27,12 @@
                     linkedlist.AddFirst(30);
                     linkedlist.AddFirst(56);
                     linkedlist.Display();
+                    break;
+                case 3:
+                    Linkedlist linkedlist1 = new Linkedlist();
+                    linkedlist1.Append(70);
+                    linkedlist1.Append(30);
+                    linkedlist1.Append(50);
                     break;
                 default:
                     Console.WriteLine("Choose a Valid Option");

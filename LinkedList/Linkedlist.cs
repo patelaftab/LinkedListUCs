@@ -10,7 +10,7 @@ namespace LinkedList
     {
         public Node head;
 
-        public void Add(int data)
+        public void AddLast(int data)
         {
             Node node = new Node(data);
                 if(this.head == null)
@@ -35,6 +35,10 @@ namespace LinkedList
             newNode.next = head;
             head = newNode;
             Console.WriteLine($"{newNode.data} is added into the list.");
+        }
+        public void Append(int data)
+        {
+            AddLast(data);
         }
         public void Display()
         {
