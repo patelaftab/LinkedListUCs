@@ -11,7 +11,8 @@
                 "Choose 2): To AddFirst in a linked list \n" +
                 "Choose 3): To Append in a linked list \n" +
                 "Choose 4): To Insert Between in a linked list \n" +
-                "Choose 5): To Removing First Element in a linked list \n");
+                "Choose 5): To Removing First Element in a linked list \n" +
+                "Choose 6): To Removing Last Element in a linked list \n");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch(option)
@@ -49,6 +50,14 @@
                     linkedlist3.AddLast(70);
                     linkedlist3.RemoveFirst();
                     linkedlist3.Display();
+                    break;
+                    case 6:
+                     Linkedlist linkedlist4= new Linkedlist();
+                    linkedlist4.AddFirst(56);
+                    linkedlist4.AddLast(30);
+                    linkedlist4.AddLast(70);
+                    linkedlist4.RemoveLast();
+                    linkedlist4.Display();
                     break;
                 default:
                     Console.WriteLine("Choose a Valid Option");
