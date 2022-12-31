@@ -66,22 +66,28 @@ namespace LinkedList
             if (!isFound)
                 Console.WriteLine($"{data} node is not present.");
         }
-            public void Display()
+        public void RemoveFirst()      //AddFirst UC5 
+        {
+            int deletedNode = head.data;
+            head = head.next;
+            Console.WriteLine($"First node {deletedNode} has been removed.");
+        }
+        public void Display()
         {
             Node temp = this.head;
-            if(temp==null)
-            {
-                Console.WriteLine("Linkedlist Is Empty");
-                return;
-            }
-            else
-            {
-                while(temp!=null)
+                if(temp==null)
                 {
-                    Console.WriteLine(temp.data+ " ");
-                    temp = temp.next;
+                    Console.WriteLine("Linkedlist Is Empty");
+                    return;
                 }
-            }
+                else
+                {
+                    while(temp!=null)
+                    {
+                        Console.WriteLine(temp.data+ " ");
+                        temp = temp.next;
+                    }
+                }
         }
     }
 }
