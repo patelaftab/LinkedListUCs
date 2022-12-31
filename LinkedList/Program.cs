@@ -9,7 +9,8 @@
             Console.WriteLine("Choose a option from below\n" +
                 "\nChoose 1): To Creating a linked list \n" +
                 "Choose 2): To AddFirst in a linked list \n" +
-                "Choose 3): To Append in a linked list \n");
+                "Choose 3): To Append in a linked list \n" +
+                "Choose 4): To Insert Between in a linked list \n");
             int option = Convert.ToInt32(Console.ReadLine());
 
             switch(option)
@@ -33,6 +34,12 @@
                     linkedlist1.Append(70);
                     linkedlist1.Append(30);
                     linkedlist1.Append(50);
+                    break;
+                    case 4:
+                        Linkedlist linkedlist2= new Linkedlist();
+                    linkedlist2.AddFirst(56);
+                    linkedlist2.AddLast(70);
+                    linkedlist2.InsertBetweenNodes(56,30,70);
                     break;
                 default:
                     Console.WriteLine("Choose a Valid Option");
